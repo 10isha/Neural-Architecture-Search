@@ -71,7 +71,7 @@ def main():
 
   genotype = eval("genotypes.%s" % args.arch)
   model = Network(args.init_channels, CIFAR_CLASSES, args.layers, args.auxiliary, genotype)
-  model.load_state_dict(torch.load('EVAL/ckp2.pt'))
+  model.load_state_dict(torch.load('EVAL/ckp3.pt'))
   model = model.cuda()
 
   logging.info("param size = %fMB", utils.count_parameters_in_MB(model))
